@@ -1,0 +1,59 @@
+/* dropdown button */
+.dropbtn {
+  padding: 3px;
+  border:none;
+  cursor:pointer;
+  background-color: #fbcf8a;
+  color: #3b8083;
+  font-size: 25px;
+  position: fixed;
+  left: 38%;
+  font-family: 'Dosis', sans-serif;
+  width:300px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+/* dropdown button on hover and focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #ff9d5c;
+}
+
+.option:hover, .option:focus {
+  background-color: #ff9d5c;
+}
+
+/* the container/div needed to position the dropdown content*/
+.dropdown {
+  position:relative;
+  left:38%;
+  display:inline-block;
+}
+
+/* dropdown content (hidden by default)*/
+.dropdown-content {
+  display:none;
+  position:absolute;
+  min-width: 160px;
+  z-index:1;
+  width: 300px;
+  height: 40px;
+}
+
+/* links inside dropdown */
+.dropdown-content a {
+  color:#3b8083;
+  padding:12px 16px;
+  text-decoration:none;
+  display:block;
+  background-color: #fbcf8a;
+  font-family: 'Dosis', sans-serif;
+  font-size: 25px;
+}
+
+/* show dropdown menu when user clicks on button (use JavaScript) */
+.show {
+  display:block;
+}
+
+/* credit for dropdown code to w3schools */

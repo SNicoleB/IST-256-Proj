@@ -57,6 +57,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="styles/group_proj.css" type="text/css" rel="stylesheet"/>
+<link href="styles/byType.css" type="text/css" rel="stylesheet"/>
+<script src="scripts/byType.js" defer></script>
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -70,6 +72,17 @@
 </ul>
 </nav>
 <h2>Type</h2>
+<div class="dropdown">
+  <button onclick="dropDown()" class="dropbtn">search by food type</button>
+  <div id="typeDropdown" class="dropdown-content">
+    <a href="#" class="option">fast food</a>
+    <a href="#" class="option">sit-down restaurant</a>
+    <a href="#" class="option">breakfast</a>
+    <a href="#" class="option">Italian cuisine</a>
+    <a href="#" class="option">Mexican cuisine</a>
+    <a href="#" class="option">Asian cuisine</a>
+  </div>
+</div>
 <footer id="mainfooter">
 <p>
 want grub? git it.

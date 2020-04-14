@@ -57,6 +57,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="styles/group_proj.css" type="text/css" rel="stylesheet"/>
+<link href="styles/cheapest.css" type="text/css" rel="stylesheet"/>
+<script src="scripts/cheapest.js" defer></script>
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -70,6 +72,16 @@
 </ul>
 </nav>
 <h2>Price</h2>
+<br><br>
+<div class="dropdown">
+  <button onclick="dropDown()" class="dropbtn">search by price</button>
+  <div id="cheapestDropdown" class="dropdown-content">
+    <a href="#" class="option">cheapest to priciest</a>
+    <a href="#" class="option">priciest to cheapest</a>
+    <a href="#" class="option">free</a>
+  </div>
+</div>
+<!-- credit for dropdown code to w3schools -->
 <footer id="mainfooter">
 <p>
 want grub? git it.
