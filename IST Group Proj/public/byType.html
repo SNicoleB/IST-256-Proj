@@ -58,7 +58,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="stylesheets/group_proj.css" type="text/css" rel="stylesheet"/>
 <link href="stylesheets/byType.css" type="text/css" rel="stylesheet"/>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
 <script src="javascripts/byType.js" defer></script>
+
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -75,14 +83,23 @@
 <div class="dropdown">
   <button onclick="dropDown()" class="dropbtn">search by food type</button>
   <div id="typeDropdown" class="dropdown-content">
-    <a href="#" class="option">fast food</a>
-    <a href="#" class="option">sit-down restaurant</a>
-    <a href="#" class="option">breakfast</a>
-    <a href="#" class="option">Italian cuisine</a>
-    <a href="#" class="option">Mexican cuisine</a>
-    <a href="#" class="option">Asian cuisine</a>
+    <ul>
+      <a href="#" class="option" onclick="displayDResults()">Delivery</a>
+      <a href="#" class="option">Dine-out</a>
+      <a href="#" class="option">Nightlife</a>
+      <a href="#" class="option">Catching-up</a>
+      <a href="#" class="option">Takeaway</a>
+      <a href="#" class="option">Cafes</a>
+    </ul>
   </div>
 </div>
+<br><br><br><br><br>
+
+<!-- results of search -->
+<div class="deliveryResults" id="deliveryResultsID">
+  adsf
+</div>
+
 <footer id="mainfooter">
 <p>
 want grub? git it.
