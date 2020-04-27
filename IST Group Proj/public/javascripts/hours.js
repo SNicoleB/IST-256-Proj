@@ -1,30 +1,7 @@
 // when user clicks button, toggle between hiding and showing dropdown content //
 function dropDown() {
-  var cats;
-  $.ajax({
-    type:"get",
-    async: false,
-    url:"https://developers.zomato.com/api/v2.1/categories",
-    headers: {
-      'user-key': "7749b19667964b87a3efc739e254ada2",
-    },
-    success: function(data){
-      cats = data.categories;
-    }
-  });
-/* references for how to integrate api key:
-https://stackoverflow.com/questions/45261255/how-to-use-an-api-key-for-an-ajax-call
-https://stackoverflow.com/questions/3258645/pass-request-headers-in-a-jquery-ajax-get-call*/
-
-  $.each(cats, function(index, value){
-    $('#option' + (index + 1)).text(value.categories.name);
-    $('#option' + (index + 1)).data('catID', value.categories.id);
-  });
-/* reference for using data method to create custom attribute
-https://api.jquery.com/data/ */
-
-  document.getElementById("typeDropdown").classList.toggle("show");
-}
+  document.getElementById("locationDropdown").classList.toggle("show");
+};
 
 //close dropdown if someone clicks outside of it
 window.onclick = function(event) {
@@ -41,32 +18,48 @@ window.onclick = function(event) {
 }
 // credit for dropdown code to w3schools //
 
+//display results when option clicked, hide previous results//
+function displayLResults1() {
+  document.getElementById("searchResultsID1").classList.remove("searchResults");
+  document.getElementById("searchResultsID1").classList.add("showDisplayResults");
+  document.getElementById("searchResultsID2").classList.add("searchResults");
+  document.getElementById("searchResultsID3").classList.add("searchResults");
+  document.getElementById("searchResultsID4").classList.add("searchResults");
+  document.getElementById("searchResultsID5").classList.add("searchResults");
+}
 
-//display results when option clicked//
-function displayDResults(elementID) {
-  document.getElementById("deliveryResultsID").classList.remove("deliveryResults");
-  document.getElementById("deliveryResultsID").classList.add("showDisplayResults");
-  var catID = $("#" + elementID).data('catID');
+function displayLResults2() {
+  document.getElementById("searchResultsID2").classList.remove("searchResults");
+  document.getElementById("searchResultsID2").classList.add("showDisplayResults");
+  document.getElementById("searchResultsID1").classList.add("searchResults");
+  document.getElementById("searchResultsID3").classList.add("searchResults");
+  document.getElementById("searchResultsID4").classList.add("searchResults");
+  document.getElementById("searchResultsID5").classList.add("searchResults");
+}
 
-  var rests;
-  $.ajax({
-    type:"get",
-    async: false,
-    url:"https://developers.zomato.com/api/v2.1/search?category=" + catID + "&count=10",
-    headers: {
-      'user-key': "7749b19667964b87a3efc739e254ada2",
-    },
-    success: function(data){
-      rests = data.restaurants;
-    }
-  });
+function displayLResults3() {
+  document.getElementById("searchResultsID3").classList.remove("searchResults");
+  document.getElementById("searchResultsID3").classList.add("showDisplayResults");
+  document.getElementById("searchResultsID2").classList.add("searchResults");
+  document.getElementById("searchResultsID1").classList.add("searchResults");
+  document.getElementById("searchResultsID4").classList.add("searchResults");
+  document.getElementById("searchResultsID5").classList.add("searchResults");
+}
 
-  var restNames = "";
-  $.each(rests, function(index, value){
-    restNames = restNames + "\r\n" + "\r\n" + value.restaurant.name;
-  });
-  /* reference for carriage return line feed:
-  https://stackoverflow.com/questions/9980416/how-can-i-insert-new-line-carriage-returns-into-an-element-textcontent */
+function displayLResults4() {
+  document.getElementById("searchResultsID4").classList.remove("searchResults");
+  document.getElementById("searchResultsID4").classList.add("showDisplayResults");
+  document.getElementById("searchResultsID2").classList.add("searchResults");
+  document.getElementById("searchResultsID3").classList.add("searchResults");
+  document.getElementById("searchResultsID1").classList.add("searchResults");
+  document.getElementById("searchResultsID5").classList.add("searchResults");
+}
 
-  $('#deliveryResultsID').text(restNames);
+function displayLResults5() {
+  document.getElementById("searchResultsID5").classList.remove("searchResults");
+  document.getElementById("searchResultsID5").classList.add("showDisplayResults");
+  document.getElementById("searchResultsID2").classList.add("searchResults");
+  document.getElementById("searchResultsID3").classList.add("searchResults");
+  document.getElementById("searchResultsID4").classList.add("searchResults");
+  document.getElementById("searchResultsID1").classList.add("searchResults");
 }

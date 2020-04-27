@@ -82,22 +82,59 @@
 
 <br><br>
 <div class="dropdown">
-  <button onclick="dropDown()" class="dropbtn">search by restaurant hours</button>
-  <div id="typeDropdown" class="dropdown-content">
+  <button onclick="dropDown()" class="dropbtn">search by hours</button>
+  <div id="locationDropdown" class="dropdown-content">
     <ul>
-      <a href="#" class="option" id="option1" onclick="displayDResults('option1')"></a>
-      <a href="#" class="option" id="option2" onclick="displayDResults('option2')"></a>
-      <a href="#" class="option" id="option3" onclick="displayDResults('option3')"></a>
-      <a href="#" class="option" id="option4" onclick="displayDResults('option4')"></a>
-      <a href="#" class="option" id="option5" onclick="displayDResults('option5')"></a>
-      <a href="#" class="option" id="option6" onclick="displayDResults('option6')"></a>
+      <a href="#" class="option" id="option1" onclick="displayLResults1()">5 Stars</a>
+      <a href="#" class="option" id="option2" onclick="displayLResults2()">4 Stars</a>
+      <a href="#" class="option" id="option3" onclick="displayLResults3()">3 Stars</a>
+      <a href="#" class="option" id="option4" onclick="displayLResults4()">2 Stars</a>
+      <a href="#" class="option" id="option5" onclick="displayLResults5()">1 Star</a>
     </ul>
   </div>
 </div>
 <br><br><br><br><br>
 
 <!-- results of search -->
-<div class="deliveryResults" id="deliveryResultsID">
+<div class="searchResults" id="searchResultsID1">
+  <br>D.P. Dough (3,658 ratings)
+  <br>Insomnia Cookies (1,052 ratings)
+  <br>The Greek (894 ratings)
+  <br>Pho 11 (856 ratings)
+</div>
+
+<div class="searchResults" id="searchResultsID2">
+  <br>Lychee Resto (3,138 ratings)
+  <br>Are U Hungry (1,717 ratings)
+  <br>Champs Sports Grill (1,581 ratings)
+  <br>Yallah Taco (1,522 ratings)
+  <br>Osaka (1,511 ratings)
+  <br>Beijing Chinese Restaurant (1,199 ratings)
+  <br>Canyon Pizza (1,196 ratings)
+  <br>Wings Over Happy Valley (1,147 ratings)
+  <br>The Cove NY Syle Pizzeria (1,125 ratings)
+  <br>Primanti Bros. (1,093 ratings)
+</div>
+
+<div class="searchResults" id="searchResultsID3">
+  <br>Gumby's (1,665 ratings)
+  <br>Pita Cabana Grill (490 ratings)
+  <br>Arena Bar & Grill (328 ratings)
+  <br>College Pizza (222 ratings)
+  <br>Pokey's Wings (203 ratings)
+  <br>Sauly Boy's (144 ratings)
+  <br>Xi-an Grill (123 ratings)
+  <br>Taco 'bout it (47 ratings)
+  <br>Panda Express (45 ratings)
+  <br>Snap Custom Pizza (14 ratings)
+</div>
+
+<div class="searchResults" id="searchResultsID4">
+  <br><i>no 2 star ratings in State College</i>
+</div>
+
+<div class="searchResults" id="searchResultsID5">
+  <br><i>no 1 star ratings in State College</i>
 </div>
 
 <footer id="mainfooter">
