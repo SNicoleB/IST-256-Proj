@@ -3,6 +3,16 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="stylesheets/group_proj.css" type="text/css" rel="stylesheet"/>
+<link href="stylesheets/location.css" type="text/css" rel="stylesheet"/>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script src="javascripts/location.js" defer></script>
+
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -15,7 +25,88 @@
 <li><a href="cuisine.html">cuisine</a></li>
 </ul>
 </nav>
-<h2>Location</h2>
+
+<br><br>
+<div class="dropdown">
+  <button onclick="dropDown()" class="dropbtn">search by location</button>
+  <div id="locationDropdown" class="dropdown-content">
+    <ul>
+      <a href="#" class="option" id="option1" onclick="displayLResults1()">State College</a>
+      <a href="#" class="option" id="option2" onclick="displayLResults2()">UPenn</a>
+      <a href="#" class="option" id="option3" onclick="displayLResults3()">Pitt</a>
+      <a href="#" class="option" id="option4" onclick="displayLResults4()">Lehigh</a>
+      <a href="#" class="option" id="option5" onclick="displayLResults5()">Temple</a>
+    </ul>
+  </div>
+</div>
+<br><br><br><br><br>
+
+<!-- results of search -->
+<div class="searchResults" id="searchResultsID1">
+  <br>The Corner Room
+  <br>India Pavilion
+  <br>The Waffle Shop
+  <br>Jersey Mike's
+  <br>Little Szechuan
+  <br>Green Bowl
+  <br>Noodles and Company
+  <br>Tadashi Japanese Restaurant
+  <br>Baby's Burgers and Shakes
+  <br>Yallah Taco
+</div>
+
+<div class="searchResults" id="searchResultsID2">
+  <br>Saffron Patch
+  <br>Carnival Pizza IV
+  <br>Ed's Buffalo Wings & Pizza
+  <br>Savas Brick Oven Pizza
+  <br>Stacy's Pizza and Wings
+  <br>Sitar India Cuisine
+  <br>Mad Greek's Pizza
+  <br>Thai Singha House
+  <br>Boston Market
+  <br>Don Barriga Mexican Grill
+</div>
+
+<div class="searchResults" id="searchResultsID3">
+  <br>Pittza Cafe & Breakfast
+  <br>Zen Asian Diner
+  <br>Szechuan Spice
+  <br>Al's Fish & Chicken
+  <br>Shady Grove
+  <br>Pizza Bellino
+  <br>Sushi Too
+  <br>Fat Head's Saloon
+  <br>Pizza Perfectta
+  <br>Little Asia
+</div>
+
+<div class="searchResults" id="searchResultsID4">
+  <br>Bull & Bear
+  <br>Touch Thai
+  <br>General Zapata
+  <br>Sibri's Restaurant
+  <br>Lehigh Pizza
+  <br>Rakkii Ramen
+  <br>Wiz Kidz
+  <br>Fratelli Pizzeria and Cafe
+  <br>Playa Bowls
+  <br>Rosanna's Restaurant
+</div>
+
+<div class="searchResults" id="searchResultsID5">
+  <br>Diamond Pizza and Grill
+  <br>Del Rossi's
+  <br>Mood Indian
+  <br>Dim Sum Garden
+  <br>Que Chula es Puebla
+  <br>Pita Chip
+  <br>Torch-Wood Cafe
+  <br>Pho 20
+  <br>Tiffin
+  <br>Zuzu's Kitchen
+</div>
+
 <footer id="mainfooter">
 <p>
 want grub? git it.
