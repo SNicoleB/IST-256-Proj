@@ -1,3 +1,26 @@
+/* ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 10px;
+	background-color:lightgrey;
+	border-style:solid;
+}
+li {
+	display: inline;
+	border-right: 2px solid black;
+}
+li a:hover {
+	background-color:black;
+	color:white;
+}
+li:last-child {
+	border-right: none;
+}
+a {
+	background-color: lightgrey;
+	padding: 10px;
+} */
+
 body {
 background-color: #FF9D5C;
 }
