@@ -1,3 +1,5 @@
+//API used: zomato, https://developers.zomato.com/api#headline1
+
 // when user clicks button, toggle between hiding and showing dropdown content //
 function dropDown() {
   var cats;

@@ -1,0 +1,80 @@
+<html>
+
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+<link href="stylesheets/group_proj.css" type="text/css" rel="stylesheet"/>
+<link href="stylesheets/price.css" type="text/css" rel="stylesheet"/>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
+<script src="javascripts/price.js" defer></script>
+
+<h1>GitGrub</h1>
+<nav>
+<ul>
+<li><a href="index.html">home</a></li>
+<li><a href="byLocation.html">location</a></li>
+<li><a href="byType.html">type</a></li>
+<li><a href="topRated.html">ratings</a></li>
+<li><a href="price.html">price</a></li>
+<li><a href="recipes.html">recipes</a></li>
+<li><a href="cuisine.html">cuisine</a></li>
+</ul>
+</nav>
+
+<br><br>
+<div class="dropdown">
+  <button onclick="dropDown()" class="dropbtn">search by price</button>
+  <div id="locationDropdown" class="dropdown-content">
+    <ul>
+      <a href="#" class="option" id="option1" onclick="displayLResults1()">$</a>
+      <a href="#" class="option" id="option2" onclick="displayLResults2()">$$</a>
+      <a href="#" class="option" id="option3" onclick="displayLResults3()">$$$</a>
+    </ul>
+  </div>
+</div>
+<br><br><br><br><br>
+
+<!-- results of search -->
+<div class="searchResults" id="searchResultsID1">
+  <br>Canyon Pizza
+  <br>Baby's Burgers & Shakes
+  <br>The Original Waffle Shop West
+  <br>The Waffle Shop
+  <br>Primanti Bros. Restaurant and Bar
+  <br>Yallah Taco
+  <br>Big Bowl Noodle House
+  <br>Noodles and Company
+  <br>Uncle Chen's
+  <br>College Pizza
+</div>
+
+<div class="searchResults" id="searchResultsID2">
+  <br>The Corner Room
+  <br>The Tavern
+  <br>India Pavilion
+  <br>Faccia Luna Pizzeria
+  <br>Tadashi Japanese Restaurant
+  <br>Kimchi Korean Restaurant
+  <br>Green Bowl
+  <br>Mad Mex
+  <br>Sakura
+  <br>Champs Downtown
+</div>
+
+<div class="searchResults" id="searchResultsID3">
+  <br>Spat's at the Grill
+  <br>Gigi's Southern Table
+</div>
+
+<!-- price information from Google -->
+
+<footer id="mainfooter">
+<p>
+want grub? git it.
+</p>
+</footer>
+</html>
