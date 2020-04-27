@@ -62,15 +62,15 @@
 }
 
 /* credit for dropdown code to w3schools */
-.deliveryResults {
+.searchResults {
   display:none;
 }
 
-#deliveryResultsID {
+#searchResultsID1, #searchResultsID2, #searchResultsID3, #searchResultsID4, #searchResultsID5{
   font-family: 'Dosis', sans-serif;
   font-size: 25px;
   color: #3B8083;
   background-color: #FBCF8A;
   padding-left: 20px;
-  padding-bottom: 90px;
+  padding-bottom:100px;
 }
