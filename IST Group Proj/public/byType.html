@@ -4,7 +4,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="stylesheets/group_proj.css" type="text/css" rel="stylesheet"/>
 <link href="stylesheets/byType.css" type="text/css" rel="stylesheet"/>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+
 <script src="javascripts/byType.js" defer></script>
+
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -21,14 +29,22 @@
 <div class="dropdown">
   <button onclick="dropDown()" class="dropbtn">search by food type</button>
   <div id="typeDropdown" class="dropdown-content">
-    <a href="#" class="option">fast food</a>
-    <a href="#" class="option">sit-down restaurant</a>
-    <a href="#" class="option">breakfast</a>
-    <a href="#" class="option">Italian cuisine</a>
-    <a href="#" class="option">Mexican cuisine</a>
-    <a href="#" class="option">Asian cuisine</a>
+    <ul>
+      <a href="#" class="option" id="option1" onclick="displayDResults('option1')"></a>
+      <a href="#" class="option" id="option2" onclick="displayDResults('option2')"></a>
+      <a href="#" class="option" id="option3" onclick="displayDResults('option3')"></a>
+      <a href="#" class="option" id="option4" onclick="displayDResults('option4')"></a>
+      <a href="#" class="option" id="option5" onclick="displayDResults('option5')"></a>
+      <a href="#" class="option" id="option6" onclick="displayDResults('option6')"></a>
+    </ul>
   </div>
 </div>
+<br><br><br><br><br>
+
+<!-- results of search -->
+<div class="deliveryResults" id="deliveryResultsID">
+</div>
+
 <footer id="mainfooter">
 <p>
 want grub? git it.

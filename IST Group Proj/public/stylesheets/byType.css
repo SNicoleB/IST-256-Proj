@@ -56,4 +56,12 @@
   display:block;
 }
 
+.showDisplayResults {
+  display:block;
+  white-space: pre;
+}
+
 /* credit for dropdown code to w3schools */
+.deliveryResults {
+  display:none;
+}
