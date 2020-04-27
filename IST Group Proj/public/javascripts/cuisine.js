@@ -4,12 +4,12 @@ function dropDown() {
   $.ajax({
     type:"get",
     async: false,
-    url:"https://developers.zomato.com/api/v2.1/categories",
+    url:"https://developers.zomato.com/api/v2.1/cuisines?city_id=280",
     headers: {
       'user-key': "7749b19667964b87a3efc739e254ada2",
     },
     success: function(data){
-      cats = data.categories;
+      cats = data.cuisines;
     }
   });
 /* references for how to integrate api key:
@@ -17,8 +17,8 @@ https://stackoverflow.com/questions/45261255/how-to-use-an-api-key-for-an-ajax-c
 https://stackoverflow.com/questions/3258645/pass-request-headers-in-a-jquery-ajax-get-call*/
 
   $.each(cats, function(index, value){
-    $('#option' + (index + 1)).text(value.categories.name);
-    $('#option' + (index + 1)).data('catID', value.categories.id);
+    $('#option' + (index + 1)).text(value.cuisine.cuisine_name);
+    $('#option' + (index + 1)).data('catID', value.cuisine.cuisine_id);
   });
 /* reference for using data method to create custom attribute
 https://api.jquery.com/data/ */
@@ -52,7 +52,7 @@ function displayDResults(elementID) {
   $.ajax({
     type:"get",
     async: false,
-    url:"https://developers.zomato.com/api/v2.1/search?category=" + catID + "&count=10",
+    url:"https://developers.zomato.com/api/v2.1/search?cuisines=" + catID + "&count=10",
     headers: {
       'user-key': "7749b19667964b87a3efc739e254ada2",
     },
