@@ -3,6 +3,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
 <link href="stylesheets/group_proj.css" type="text/css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="javascripts/recipe.js"></script>
 <h1>GitGrub</h1>
 <nav>
 <ul>
@@ -18,7 +20,26 @@
 
 <h2>Recipes</h2>
 <div>
-  
+  <h3>Create a Recipe</h3>
+  <form id="recipeForm" method="POST">
+    <label>Recipe Name:</label>
+    <input id="recipeName" name="recipeName" type="text">
+    <br>
+    <br>
+    <label>Ingredients:</label>
+    <input id="recipeIngr" name="recipeIngr" type="text">
+    <br>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+<div>
+  <h3>List of Recipes</h3>
+  <ul id="recipeList">
+    <li>Recipe Name: Omlet &nbsp&nbsp&nbspIngredients: egg, cheese</li>
+    <li>Recipe Name: Mac & Cheese &nbsp&nbsp&nbspIngredients: noodles, cheese, butter, milk</li>
+    <li>Recipe Name: Nachos &nbsp&nbsp&nbspIngredients: chips, cheese, salsa, guacamole</li>
+  </ul>
 </div>
 
 <footer id="mainfooter">

@@ -2,7 +2,7 @@ const Recipe = require('../models/recipe.model.js');
 
 // Create and Save a new Note
 exports.create = (req, res) => {
-
+  
 };
 
 // Retrieve and return all notes from the database.

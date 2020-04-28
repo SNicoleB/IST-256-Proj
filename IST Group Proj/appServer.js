@@ -1,3 +1,12 @@
+//from app.js
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+//var recipeRouter = require('./routes/recipes');
+//end of app.js
 // Based on code at https://www.callicoder.com/node-js-express-mongodb-restful-crud-api-tutorial/
 
 const express = require('express');
@@ -30,13 +39,14 @@ mongoose.connect(dbConfig.url, {
 
 // define a simple route
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to GitGrub!"});
+    res.json({"message": "Welcome to GitGrub!\nGo to localhost:3000/recipes for recipe JSON objects"});
+    //res.sendFile(path.join(__dirname + "/public/index.html"));
 });
 
 // Require Notes routes
 require('./app/routes/recipe.routes.js')(app);
 
 // listen for requests
-// app.listen(3000, () => {
-//     console.log("Server is listening on port 3000");
-// });
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
+});
